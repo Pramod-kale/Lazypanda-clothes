@@ -1,0 +1,6 @@
+naming conventions for files, folders,  components and Assets
+
+1) all the react components should be higher pascal case -- ReactComponentShouldbeNamedLikeThis
+2) all the folder names and functional components should be lower pascal case -- allTheFolderNamesShouldbeNamedLikeThis
+3) all the files related to styles should be named with higher pascal case with .styles.css or .styles.scss
+4) all the assets like images and svg videos and other stufs should be named in lower pascal kebab case -- all-The-Assets-And-Other_stuffs-Shouldbe-Named-Like-This
