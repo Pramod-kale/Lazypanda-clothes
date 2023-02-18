@@ -6,7 +6,7 @@ import Button from '../button/button.component';
 import {
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
+  // createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 
 import './sign-in-form.styles.scss';
