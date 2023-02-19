@@ -1,4 +1,4 @@
-// import { initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   signInWithRedirect,
@@ -21,17 +21,17 @@ import {
 } from 'firebase/firestore';
 
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAr5zkL4m0AWOetvWZhXTP-x4Iq8xwcWsY",
-//   authDomain: "blackpandaclothing-a3b44.firebaseapp.com",
-//   projectId: "blackpandaclothing-a3b44",
-//   storageBucket: "blackpandaclothing-a3b44.appspot.com",
-//   messagingSenderId: "527826791573",
-//   appId: "1:527826791573:web:f409bbc5aa62569f55bf9c",
-//   measurementId: "G-MV02MJMQMY"
-// };
+const firebaseConfig = {
+  apiKey: "AIzaSyAr5zkL4m0AWOetvWZhXTP-x4Iq8xwcWsY",
+  authDomain: "blackpandaclothing-a3b44.firebaseapp.com",
+  projectId: "blackpandaclothing-a3b44",
+  storageBucket: "blackpandaclothing-a3b44.appspot.com",
+  messagingSenderId: "527826791573",
+  appId: "1:527826791573:web:f409bbc5aa62569f55bf9c",
+  measurementId: "G-MV02MJMQMY"
+};
 
-// const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 
