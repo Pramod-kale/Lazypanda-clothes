@@ -27,7 +27,7 @@ const Shop = () => {
         getCategoriesMap()
 
 
-    }, [])
+    },)
 
 
     return (
