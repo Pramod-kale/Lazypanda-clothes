@@ -7,9 +7,8 @@ import Category from '../Category/CategoryComponent';
 
 import './ShopPage-styles.scss';
 import { useEffect } from 'react';
-import { setCategories } from '../../store/categories/category.action';
+import { fetchCategoriesAsync } from '../../store/categories/category.action';
 import { useDispatch } from 'react-redux';
-import { getCategoriesAndDocuments } from '../../utils/firebase/firebase.utils'
 
 
 
@@ -18,16 +17,8 @@ const Shop = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-
-        const getCategoriesMap = async () => {
-            const categoriesArray = await getCategoriesAndDocuments()
-            dispatch(setCategories(categoriesArray))
-        }
-
-        getCategoriesMap()
-
-
-    },)
+        dispatch(fetchCategoriesAsync())
+    }, [])
 
 
     return (
