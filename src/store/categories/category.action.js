@@ -16,15 +16,15 @@ export const fetchCategoriesFailed = (error) =>
 
 
 
-export const fetchCategoriesAsync = () => async (dispatch) => {
+// export const fetchCategoriesAsync = () => async (dispatch) => {
 
-    dispatch(fetchCategoriesStart())
-    try {
-        const categoriesArray = await getCategoriesAndDocuments()
-        dispatch(fetchCategoriesSuccess(categoriesArray))
+//     dispatch(fetchCategoriesStart())
+//     try {
+//         const categoriesArray = await getCategoriesAndDocuments()
+//         dispatch(fetchCategoriesSuccess(categoriesArray))
 
-    } catch (error) {
-        dispatch(fetchCategoriesFailed(error))
-    }
+//     } catch (error) {
+//         dispatch(fetchCategoriesFailed(error))
+//     }
 
-}
+// }
