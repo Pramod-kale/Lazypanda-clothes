@@ -1,13 +1,14 @@
 import './CheckoutPage.scss';
-import { useContext } from 'react';
-import { CartContext } from './../../contexts/cart.context';
 import CheckoutItem from '../CheckoutItem/CheckoutItem';
 
-
+//redux
+import { selectCartTotal, selectCartItems } from '../../store/cart/cart.selector';
+import { useSelector } from 'react-redux';
 
 const CheckoutPage = () => {
 
-    const { cartItems, totalPrice } = useContext(CartContext)
+    const cartItems = useSelector(selectCartItems)
+    const totalPrice = useSelector(selectCartTotal)
 
 
     return (
@@ -18,7 +19,7 @@ const CheckoutPage = () => {
                     <span>Product</span>
                 </div>
                 <div className='header-block'>
-                    <span>Desxription</span>
+                    <span>Description</span>
                 </div>
                 <div className='header-block'>
                     <span>Quantity</span>
