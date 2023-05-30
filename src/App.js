@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux';
 
 
 import { createUserDocumentFromAuth, onAuthStateChangedListener } from './utils/firebase/firebase.utils';
-import { setCurrentUser } from './store/user/user.action';
 import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication.component';
 import Shop from './routes/shop/shop.page';
 import CheckoutPage from './components/Checkout-page/CheckoutPage';
+import { setCurrentUser } from './store/user/user.reducer';
 
 const App = () => {
 
@@ -20,7 +20,11 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
-      dispatch(setCurrentUser(user));
+
+      const pickedUser = user && (({ accessToken, email }) => ({ accessToken, email }))
+        (user)
+
+      dispatch(setCurrentUser(pickedUser));
     });
 
     return unsubscribe;
