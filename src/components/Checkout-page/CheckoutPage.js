@@ -4,6 +4,7 @@ import CheckoutItem from '../CheckoutItem/CheckoutItem';
 //redux
 import { selectCartTotal, selectCartItems } from '../../store/cart/cart.selector';
 import { useSelector } from 'react-redux';
+import Paymentform from '../payment-form/payment-form';
 
 const CheckoutPage = () => {
 
@@ -37,6 +38,8 @@ const CheckoutPage = () => {
             )}
 
             <span className='total'>Total: ₹{totalPrice}</span>
+
+            <Paymentform />
         </div>
     )
 }

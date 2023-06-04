@@ -1,11 +1,11 @@
 import './spinner.scss'
 import React from 'react'
 
-const Spinner = () => {
+const Spinner = ({ height, width }) => {
     return (
 
-        <div className="spinner-container">
-            <div className="spinner">
+        <div style={{ height, width }} className="spinner-container">
+            <div style={{ height, width }} className="spinner">
 
             </div>
         </div>

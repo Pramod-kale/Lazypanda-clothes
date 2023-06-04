@@ -14,11 +14,10 @@ import { selectCurrentUser } from '../../store/user/user.selector';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { signOutStart } from '../../store/user/user.action';
 
-
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser)
   const isCartOpen = useSelector(selectIsCartOpen)
-  const userName = useSelector(state => state?.user?.currentUser?.displayName)
+  const userName = useSelector(selectCurrentUser)
   const dispatch = useDispatch()
 
   const signOutHandler = () => {
@@ -47,7 +46,7 @@ const Navigation = () => {
             </Link>
           )}
           < CartIconComponent />
-          {userName && '|' + userName}
+          {userName && '|' + userName?.displayName}
         </div>
         {isCartOpen && <CartDropdown />}
       </div>
