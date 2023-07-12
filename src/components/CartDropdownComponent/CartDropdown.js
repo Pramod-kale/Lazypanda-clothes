@@ -1,5 +1,6 @@
 import './CartDropdown.scss';
 import { useNavigate } from 'react-router-dom';
+import { useCallback } from 'react';
 
 import Button from "../button/button.component"
 import CartItem from '../CartItem/CartItem';
@@ -11,9 +12,9 @@ const CartDropdown = () => {
     const cartItems = useSelector(selectCartItems)
     const navigate = useNavigate()
 
-    const navigateToCheckout = () => {
+    const navigateToCheckout = useCallback(() => {
         navigate('/checkout')
-    }
+    }, [])
 
     return (
         <div className='cart-dropdown-container'>
